@@ -1,0 +1,17 @@
+Definitions and implementations - actual code that does the work
+	. body of the function
+	. implementation of a class method
+
+	For example:
+
+
+	#include "space.h" //include header file example in header.txt
+
+	int addPlanets(int a, int b){ //definition
+		return a + b;
+	}
+
+	Planet::Planet(int mass, int distance) : mass(mass), distance(distance) {} //constructor definition
+	int Planet::getMass() const {
+		return mass;
+	}

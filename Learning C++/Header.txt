@@ -1,0 +1,24 @@
+Declarations - tells compiler this thing exists and here is its shape
+	. function signatures
+	. class definitions
+	. type aliases
+	. constants
+
+Other files #include this header to know what is available
+
+For example:
+
+
+
+#pragma once // prevents file being included twice
+
+int addPlanets(int a, int b); //declaration
+
+class Planet{
+public:
+	Planet(int size, int distance);
+	int getMass() const;
+private:
+	int mass;
+	int distance;
+}

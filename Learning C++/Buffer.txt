@@ -1,0 +1,26 @@
+When we ask the library to read a string, it discards whitespace chars and then reads the string.
+
+The input-output library saves output in a internal data structure called a buffer.
+To avoid overhead of writing each reponse to output request, library uses the buffer and flushes it by writing contents to output device when necessary.
+
+3 events that cause system to flush the buffer:
+	. Buffer may be full. Library flushes automatically
+	. Library might be asked to read from standard input stream. Library flushes output buffer without waiting for it to be full
+ 	. Flushing when we say to do so
+
+
+when program does cout << "...
+The output goes into the buffer associated to standrad output stream. 
+
+when program does cin >> x;
+This read flushes the cout buffer so the user can see the prompt. 
+
+when program does << "hello, " << x...
+flushes the buffer and forces system to write output to the stream
+
+It is important to flush the buffer when writing programs that may take a long time
+
+
+
+Example:
+std::cout is a waiter. You (the program) sit at a table and order. Waiter doesnt sprint to the kitchen everytime you say something, it writes it down on a  notepad.

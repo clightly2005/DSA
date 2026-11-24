@@ -1,0 +1,12 @@
+@"
+.vs/
+x64/
+x86/
+Debug/
+Release/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.user
+"@ | Set-Content -Encoding ascii .gitignore
